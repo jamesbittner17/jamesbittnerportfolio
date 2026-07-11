@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Alley × OverTime — James Bittner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="field-lines"></div>
+
+<div class="topbar">
+  <div class="wrap">
+    <a class="topbar-back" href="index.html">← Back to portfolio</a>
+    <a class="topbar-name" href="index.html">James Bittner</a>
+  </div>
+</div>
+
+<main>
+
+  <section class="case-hero">
+    <div class="wrap">
+      <div class="case-eyebrow">Case Study · Tournament Activations</div>
+      <h1 class="case-h1">The Alley × OverTime</h1>
+      <p class="case-lede">Two tournament activations, side by side — built to draw competitive gaming audiences into live, in-person events.</p>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="split-view reveal">
+        <div>
+          <div class="video-frame">
+            <!-- Replace YOUR_ALLEY_VIDEO_ID with the ID from your unlisted YouTube link -->
+            <iframe src="https://www.youtube.com/embed/YOUR_ALLEY_VIDEO_ID" title="The Alley" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="split-label">The Alley</div>
+        </div>
+        <div>
+          <div class="video-frame">
+            <!-- Replace YOUR_OVERTIME_VIDEO_ID with the ID from your unlisted YouTube link -->
+            <iframe src="https://www.youtube.com/embed/YOUR_OVERTIME_VIDEO_ID" title="OverTime" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="split-label">OverTime</div>
+        </div>
+      </div>
+
+      <div class="case-grid reveal">
+        <div class="case-block">
+          <h4>Challenge</h4>
+          <p>Give competitive gaming communities a reason to show up in person, not just watch online.</p>
+        </div>
+        <div class="case-block">
+          <h4>Approach</h4>
+          <p>Produced two parallel tournament activations, each built around its own game and community, with live coverage and on-site production.</p>
+        </div>
+        <div class="case-block">
+          <h4>Result</h4>
+          <p>Two distinct, well-attended tournament experiences that grew the in-person footprint of the esports program.</p>
+        </div>
+      </div>
+
+      <div class="case-tags">
+        <span class="tag">Live Tournaments</span>
+        <span class="tag">On-Site Production</span>
+      </div>
+
+      <div class="note-box">
+        Note to James: I only had the video files to go on for this one — the details above are placeholders. Send me a couple of real bullet points on The Alley and OverTime (what they were, attendance, any brand/partner involved) and I'll tighten this up. I also used <strong>EAFC_Tournament.mp4</strong> for the "OverTime" side since no separate OverTime file was uploaded — let me know if that's wrong.
+      </div>
+    </div>
+  </section>
+
+  <section class="more-work">
+    <div class="wrap">
+      <div class="section-tag">More Work</div>
+      <div class="more-work-grid">
+        <a href="case-exp.html"><h3 class="more-work-title">EXP: Every eXtra Penny</h3></a>
+        <a href="case-hill.html"><h3 class="more-work-title">The Hill × Coinbox IRL</h3></a>
+        <a href="case-supernova.html"><h3 class="more-work-title">SuperNOVA</h3></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="contact-links">
+      <a href="mailto:jamesbitt17@gmail.com">jamesbitt17@gmail.com</a>
+      <a href="tel:7577590587">757-759-0587</a>
+      <a href="https://www.linkedin.com/in/jameskbittner" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="James-Bittner-Resume.pdf" download>Download Résumé ↓</a>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 James Bittner</span>
+      <span>Arlington, VA</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window){
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting){ entry.target.classList.add('is-visible'); io.unobserve(entry.target); }
+      });
+    }, { threshold: 0.1 });
+    revealEls.forEach(el => io.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('is-visible'));
+  }
+</script>
+
+</body>
+</html>
